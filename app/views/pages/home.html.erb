@@ -1,7 +1,7 @@
 <section class="jumbotron jumbotron-margin">
-  <div class="container">
-    <h1 class="display-5">Hi there</h1>
-    <h1 class="display-5 mt-5">
+  <div>
+    <h1>Hi there</h1>
+    <h1 class="mt-5">
     I'm Blaise.
     <br>
     A full-stack developer based in
@@ -9,4 +9,10 @@
     Edmonton, Alberta.
     </h1>
   </div>
+</section>
+
+<section class="jumbotron-margin">
+  <% if !@posts.empty? %>
+    <%= render "shared/posts", posts: @posts %>    
+  <% end %>
 </section>
