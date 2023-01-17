@@ -1,0 +1,13 @@
+<section class="jumbotron jumbotron-margin">
+  <h1>Blog</h1>
+
+  <% @posts.each do |post| %>
+    <div class="card mt-3">
+      <div class="card-body">
+        <h5 class="card-title"><%= post.title %></h5>
+        <p class="card-text"><%= post.created_at %></p>
+        <%= link_to "Read more", post_path(post) %>
+      </div>
+    </div>
+  <% end %>
+</section>
